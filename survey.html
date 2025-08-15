@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Survey - Participate</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="../js/survey.js" defer></script>
+  <script type="module" src="../js/firebase-config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Smart Survey</h1>
+    <form id="survey-form">
+      <div id="survey-error" class="error-msg"></div>
+      <label for="name">Name *</label>
+      <input type="text" name="name" id="name" required>
+      <label for="email">Email *</label>
+      <input type="email" name="email" id="email" required>
+      <label for="age">Age *</label>
+      <input type="number" name="age" id="age" min="1" required>
+      <label for="gender">Gender *</label>
+      <select name="gender" id="gender" required>
+        <option value="">--Select--</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+      <div class="survey-question">
+        <label for="q1">1. How did you hear about us? *</label>
+        <input type="text" name="q1" id="q1" required>
+      </div>
+      <div class="survey-question">
+        <label for="q2">2. Rate your satisfaction (1-5) *</label>
+        <select name="q2" id="q2" required>
+          <option value="">--Select--</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+        </select>
+      </div>
+      <div class="survey-question">
+        <label for="q3">3. What feature do you want most? *</label>
+        <input type="text" name="q3" id="q3" required>
+      </div>
+      <div class="survey-question">
+        <label for="q4">4. Would you recommend us? *</label>
+        <select name="q4" id="q4" required>
+          <option value="">--Select--</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </div>
+      <div class="survey-question">
+        <label for="q5">5. Any additional comments?</label>
+        <textarea name="q5" id="q5" rows="2"></textarea>
+      </div>
+      <button type="submit">Submit Survey</button>
+    </form>
+  </div>
+</body>
+</html>

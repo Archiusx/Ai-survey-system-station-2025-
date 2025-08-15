@@ -1,0 +1,135 @@
+/* Responsive, clean, modern style for Smart Survey App */
+
+:root {
+  --primary: #1e90ff;
+  --secondary: #f5f5f5;
+  --accent: #0074d9;
+  --danger: #e74c3c;
+  --success: #27ae60;
+  --radius: 8px;
+  --max-width: 450px;
+  --header-font: 'Segoe UI', Arial, sans-serif;
+  --body-font: 'Segoe UI', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  background: var(--secondary);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max-width);
+  background: #fff;
+  margin: 40px auto;
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+h1, h2 {
+  font-family: var(--header-font);
+  color: var(--primary);
+  margin-top: 0;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.3em;
+  display: block;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type="number"], select, textarea {
+  width: 100%;
+  padding: 0.7em;
+  margin-bottom: 1.2em;
+  border: 1px solid #d6d6d6;
+  border-radius: var(--radius);
+  font-size: 1em;
+  background: #f9f9f9;
+  transition: border-color 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.7em 1.7em;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a.button-link {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.7em 1.7em;
+  border-radius: var(--radius);
+  font-weight: 600;
+  margin-top: 1.5em;
+  text-align: center;
+}
+a.button-link:hover { background: var(--accent); }
+
+.error-msg {
+  color: var(--danger);
+  margin-bottom: 1em;
+  font-size: 0.97em;
+}
+.success-msg {
+  color: var(--success);
+}
+
+.survey-question {
+  margin-bottom: 1.5em;
+}
+
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2em;
+  font-size: 0.98em;
+}
+.dashboard-table th, .dashboard-table td {
+  border: 1px solid #e0e0e0;
+  padding: 0.7em;
+  text-align: left;
+}
+.dashboard-table th {
+  background: #f3f6fa;
+}
+
+.logout-btn {
+  float: right;
+  background: var(--danger);
+  padding: 0.4em 1em;
+  font-size: 0.95em;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 1em;
+  }
+  .dashboard-table th, .dashboard-table td {
+    font-size: 0.92em;
+    padding: 0.5em;
+  }
+}

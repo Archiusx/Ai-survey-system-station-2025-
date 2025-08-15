@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Smart Survey</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="../js/dashboard.js" defer></script>
+  <script type="module" src="../js/firebase-config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <button id="logout-btn" class="logout-btn">Logout</button>
+    <h1>Creator Dashboard</h1>
+    <h2>Create New Survey</h2>
+    <form id="create-survey-form">
+      <div id="create-survey-error" class="error-msg"></div>
+      <label for="title">Survey Title *</label>
+      <input type="text" name="title" id="title" required>
+      <label for="q1">Question 1 *</label>
+      <input type="text" name="q1" id="q1" required>
+      <label for="q2">Question 2 *</label>
+      <input type="text" name="q2" id="q2" required>
+      <label for="q3">Question 3 *</label>
+      <input type="text" name="q3" id="q3" required>
+      <label for="q4">Question 4 *</label>
+      <input type="text" name="q4" id="q4" required>
+      <label for="q5">Question 5 *</label>
+      <input type="text" name="q5" id="q5" required>
+      <button type="submit">Create Survey</button>
+    </form>
+    <div id="created-link" style="margin-top:1em;"></div>
+    <h2>Your Surveys</h2>
+    <div id="surveys-list"></div>
+    <div id="dashboard-loader" style="display:none;">Loading...</div>
+    <div id="responses-list" style="margin-top:2em;"></div>
+  </div>
+</body>
+</html>

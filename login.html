@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Creator Login - Smart Survey</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="../js/auth.js" defer></script>
+  <script type="module">
+    import { setupLoginForm } from "../js/auth.js";
+    setupLoginForm();
+  </script>
+  <script type="module" src="../js/firebase-config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Form Creator Login</h1>
+    <form id="login-form">
+      <div id="login-error" class="error-msg"></div>
+      <label for="email">Email *</label>
+      <input type="email" name="email" id="email" required>
+      <label for="password">Password *</label>
+      <input type="password" name="password" id="password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p style="margin-top:1em;">
+      <a href="index.html">Back to Home</a>
+    </p>
+  </div>
+</body>
+</html>
